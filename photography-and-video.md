@@ -65,6 +65,8 @@ video is an HDR signal. Both are legitimate; they are different things.
 - [Ultra HDR image format](https://developer.android.com/media/platform/hdr-image-format) -
   A normal SDR JPEG plus a gain map that lets HDR displays reconstruct the
   highlights, so one file serves both kinds of screen.
+- [ISO 21496-1](https://www.iso.org/standard/86775.html) - The ISO standard
+  for gain maps in HDR images, the mechanism behind such files.
 - [OpenEXR](https://openexr.com/) - Floating-point stills for production and
   rendering (dated above).
 
