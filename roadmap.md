@@ -4,6 +4,9 @@ The first project is useful without an HDR sink: make nouveau train the Sony
 KDL-46HX855 at 12 bpc, then use that high-precision transport for real-time
 HDR-to-SDR tone mapping.
 
+The executable experiment and recovery transaction are maintained in the
+[nouveau HDMI deep-colour hardware plan](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdmi-deep-colour-plan-2026-09-22.md).
+
 ## Reference triangle
 
 - **amdgpu** is the primary open implementation reference. Its DC code shows
