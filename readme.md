@@ -51,6 +51,7 @@ supports (10, 12, or 16 bpc). It does not mean tagging an SDR display as HDR.
 - [Standards and formats](standards.md) - The public normative chain and the
   boundary around licensed specifications.
 - [From one bit to HDR](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/colour-depth-explained.md) - Colour depth explained: counts from 2 to 281 trillion, why each step happened, the caveats, and how HDR differs from more bits.
+- [Photography and video](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/photography-and-video.md) - HDR and deep colour from capture to delivery: the two meanings of HDR, capture depth, still and video formats, and the Linux tools that keep the depth.
 - [SDR deep colour](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/sdr-deep-colour.md) - History, specifications and the signalling rules for 10-, 12- and 16-bit SDR output.
 - [Linux stack map](linux-stack.md) - Kernel, drivers, compositors, APIs, and
   applications in signal order.
