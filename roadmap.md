@@ -52,6 +52,25 @@ from a closed component.
 
 That result is deep-colour transport evidence, not HDR output.
 
+### Preserve the proven 3D layer
+
+Deep-colour testing must not silently replace the stereoscopic fixes that led
+to this investigation. After an ordinary 1080p60/12-bpc pass, repeat the link
+test with the existing 3D implementation still active:
+
+| driver | 3D implementation retained | depth path tested |
+|---|---|---|
+| amdgpu | Adrian Betschart's owner-verified HDMI 1.4 3D series | existing 12-bpc amdgpu output |
+| nouveau | stock, hardware-proven VSIF and frame-packing path | experimental 12-bpc nouveau delta |
+| proprietary NVIDIA | project's v2 EDID/VSDB 3D-mode synthesis | closed NVKMS result, presently measured at 10-bit |
+
+The target combinations are 1080p60 SBS-half, 1080p60 top-and-bottom, and
+1080p24/720p60 frame packing. Each reaches a 148.5 MHz base transport rate;
+the 12-bpc multiplier produces 222.75 MHz, just inside the owned sink's
+225 MHz declaration. The 3D VSIF and deep-colour General Control Packet are
+separate HDMI packet responsibilities, so combined success is its own
+acceptance gate.
+
 ## Phase B — real-time HDR-to-SDR at high precision
 
 ### The cross-vendor gap
