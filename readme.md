@@ -181,6 +181,8 @@ measure luminance and chromaticity. None substitutes for all the others.
 - [nouveau HDR gap audit](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdr-gap-2026-09-22.md) -
   Source-confirmed missing KMS/InfoFrame path in Linux 7.3-rc4, including the
   17-byte-versus-30-byte boundary and newer generic packet machinery.
+- [nouveau HDMI Deep Color v2](https://lore.kernel.org/dri-devel/20260922215317.611388-1-Capitain_Jack@yahoo.com/) - Link-depth selection and GCP programming for 30/36/48-bpp RGB; 12- and 10-bpc links measured on GA106 to a Sony KDL-46HX855, including 3D at 12 bpc. 48 bpp is implemented, not measured.
+- [nouveau HDMI colour format series](https://lore.kernel.org/dri-devel/20260922215336.612239-1-Capitain_Jack@yahoo.com/) - Broadcast RGB and YCbCr 4:4:4/4:2:2/4:2:0 through the head's output CSC, 25 configurations measured on the same bench. 4:2:0 and DVI are implemented, not measured.
 - [NVIDIA issue #1384](https://github.com/NVIDIA/open-gpu-kernel-modules/issues/1384) -
   Measured EDID-surface narrowing on GA106 plus the explicitly qualified HDR
   connection; the reporting bench has no HDR sink.

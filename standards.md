@@ -44,6 +44,27 @@ panel depth, and calibration-LUT precision are recorded separately.
 CTA and HDMI normative texts are licensed publications. Their public pages
 and previews are citations, not permission to redistribute the documents.
 
+## DVI and DisplayPort
+
+- [DVI 1.0 (DDWG, April 1999, archived copy)](https://glenwing.github.io/docs/DVI-1.0.pdf) -
+  The original TMDS link that HDMI extends. A DVI connector drives an HDMI
+  sink through a passive adapter, and the source then speaks HDMI
+  (InfoFrames, Deep Color, YCbCr) because the sink's EDID declares it.
+- [About DisplayPort, VESA](https://vesa.org/displayport-developer/about-displayport/) -
+  Public overview of the VESA link; the specification itself is
+  member-only.
+- [VESA DisplayHDR](https://displayhdr.org/) - VESA's HDR performance
+  certification programme for displays.
+- [DRM DP dual-mode adaptor helpers](https://docs.kernel.org/gpu/drm-kms-helpers.html#display-port-dual-mode-adaptor-helper-functions-reference) -
+  Linux implementation of DP++, which lets a DisplayPort output emit
+  TMDS/HDMI through a passive adapter.
+
+DisplayPort carries pixel encoding, colorimetry and HDR metadata in its own
+stream attributes and secondary data packets; the HDMI InfoFrame model
+applies only where a DVI or DP++ output presents a TMDS link to an HDMI
+sink. For an HDR-to-SDR adaptor, the output connector therefore says less
+than the sink's EDID about which rules apply.
+
 ## Linux and graphics APIs
 
 - [DRM mode UAPI](https://github.com/torvalds/linux/blob/master/include/uapi/drm/drm_mode.h) -

@@ -25,6 +25,13 @@ from a closed component.
 
 ## Phase A — 12-bpc HDMI on nouveau
 
+**Status 2026-09-22: measured and submitted.** The Sony OSD reported 12-bit
+and 10-bit links from nouveau on the GA106, including 3D at 12 bpc, and a
+follow-on added limited/full RGB and YCbCr 4:4:4/4:2:2/4:2:0 (25
+configurations measured; 4:2:0 and 48 bpp are implemented, not measured).
+Both series are on dri-devel, linked from the readme's repair maps. The
+`link bpc` item below remains open.
+
 ### Source work
 
 1. Derive the allowed RGB 4:4:4 depths from
