@@ -6,6 +6,8 @@ calibration and tone-mapping stages room to work; it changes neither the
 transfer function nor the gamut. This page follows it from its first
 products to the rules a Linux driver must obey to deliver it, and is the
 foundation of this list's [high-SDR](readme.md#how-to-read-this-list) goal.
+For the basics (colour counts, caveats, and how HDR differs), start with
+[From one bit to HDR](colour-depth-explained.md).
 
 ## History
 
