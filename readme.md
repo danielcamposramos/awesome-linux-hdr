@@ -203,6 +203,13 @@ measure luminance and chromaticity. None substitutes for all the others.
   behaviour and tooling in browsers.
 - [Awesome Gain Maps](https://github.com/NMoroney/Awesome-Gain-Maps) - HDR
   still images represented with gain maps.
+- [awesome-vr](https://github.com/danielcamposramos/awesome-vr) - Virtual reality headsets, runtimes and standards; headset panels are displays too, and the same colour-depth questions apply.
+- [awesome-ar](https://github.com/danielcamposramos/awesome-ar) - Augmented reality optics, tracking and standards, the see-through sibling of the headset lists.
+- [awesome-wayland](https://github.com/rcalixte/awesome-wayland) - Wayland compositors, protocols and tools, where desktop HDR and colour management are being built.
+- [awesome-video](https://github.com/krzemienski/awesome-video) - Streaming video tools, codecs and players, including the HDR delivery chain.
+- [awesome-ffmpeg](https://github.com/transitive-bullshit/awesome-ffmpeg) - Tooling around FFmpeg, which decodes and converts most of the HDR material a Linux system plays.
+- [awesome-OpenSourcePhotography](https://github.com/ibaaj/awesome-OpenSourcePhotography) - Open-source photography tools, for the capture and raw-development side of HDR and deep colour.
+- [Awesome-HDR](https://github.com/ytZhang99/Awesome-HDR) - Papers and code on HDR imaging in the photographic sense; dormant since 2022.
 
 ## Known gaps
 
