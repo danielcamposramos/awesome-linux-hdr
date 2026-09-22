@@ -16,6 +16,11 @@ material and does not mirror copyrighted standards.
 A deep-colour link can carry SDR. HDR content can be tone-mapped to SDR.
 Neither observation proves the other.
 
+This project uses **high-SDR** for SDR output produced from HDR in real time
+with 16-bit/float working precision and the highest verified 10/12/16-bpc
+scanout and link available. Working precision, framebuffer format, link depth,
+panel depth, and calibration-LUT precision are recorded separately.
+
 ## Image system
 
 - [ITU-R BT.2020](https://www.itu.int/rec/R-REC-BT.2020/en) - UHD resolution,

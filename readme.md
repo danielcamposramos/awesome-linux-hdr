@@ -17,6 +17,7 @@ list—see [provenance](PROVENANCE.md).*
 - [Start here](#start-here)
 - [Standards and formats](#standards-and-formats)
 - [Linux display stack](#linux-display-stack)
+- [Project roadmap](#project-roadmap)
 - [Rendering and playback](#rendering-and-playback)
 - [Tools](#tools)
 - [Measurement and test material](#measurement-and-test-material)
@@ -40,6 +41,11 @@ Deep colour, wide colour gamut, and HDR are related but not interchangeable.
 A 12-bpc link is useful transport evidence; it is not by itself proof of an
 HDR transfer function or metadata reaching the display.
 
+**High-SDR** in this project means HDR decoded and tone/gamut-mapped in real
+time through a 16-bit or floating-point working pipeline, then delivered as
+ordinary SDR using the highest verified scanout and link precision the output
+supports (10, 12, or 16 bpc). It does not mean tagging an SDR display as HDR.
+
 ## Start here
 
 - [Standards and formats](standards.md) - The public normative chain and the
@@ -48,6 +54,11 @@ HDR transfer function or metadata reaching the display.
   applications in signal order.
 - [Testing HDR honestly](testing.md) - A layered verification ladder that
   prevents property exposure from being mistaken for light on the wire.
+- [Open implementation roadmap](roadmap.md) - nouveau deep colour first,
+  followed by real-time HDR-to-SDR rendering over a high-bit-depth link.
+- [HDR-to-high-SDR prior art](prior-art.md) - Existing software and hardware
+  processors, the owner-provided Gemini assessment, and the remaining open
+  Linux integration gap.
 - [Linux DRM KMS documentation](https://docs.kernel.org/gpu/drm-kms.html) -
   The kernel's display-mode-setting architecture.
 - [Wayland color-management-v1](https://wayland.app/protocols/color-management-v1) -
@@ -94,6 +105,25 @@ See [standards.md](standards.md) for the connected map and citation notes.
   compositor; useful for following HDR, Vulkan, and direct-display work.
 
 The per-driver implementation map lives in [linux-stack.md](linux-stack.md).
+
+## Project roadmap
+
+The first owned-hardware programme deliberately does not require an HDR
+display: enable a standards-bounded 12-bpc nouveau HDMI link to an SDR Sony
+KDL-46HX855, then render HDR10/HLG sources through a high-precision real-time
+tone mapper into a 10-bit scanout buffer carried by that 12-bpc link. amdgpu
+is the open implementation reference; the proprietary NVIDIA stack is a
+measured behavioural control and an API reference where its glue is open.
+
+The wider target is cross-vendor **HDR-to-high-SDR on the fly**. Linux already
+has tone-mapping algorithms, 16-bit integer/float DRM formats, and individual
+high-bpc driver paths, but not one automatic, measured contract that preserves
+that precision from HDR metadata to an SDR sink across AMD, Intel, NVIDIA, and
+nouveau.
+
+See [roadmap.md](roadmap.md) for the separable acceptance gates. A 12-bpc OSD
+result proves link training. Correct HDR-to-SDR pixels prove the render path.
+Neither is reported as native HDR output.
 
 ## Rendering and playback
 
@@ -171,6 +201,9 @@ measure luminance and chromaticity. None substitutes for all the others.
 
 ## Known gaps
 
+- A vendor-neutral real-time HDR-to-high-SDR contract: metadata-driven tone
+  mapping, 16-bit/float working surfaces, verified 10/12/16-bpc scanout/link
+  selection, calibration, and an observable fallback when a layer narrows it.
 - A generation-by-generation table of HDR property and InfoFrame support for
   amdgpu, i915, nouveau, and the proprietary NVIDIA stack.
 - Reproducible compositor test recipes under KWin, Mutter, wlroots, and
