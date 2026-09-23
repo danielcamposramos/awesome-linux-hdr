@@ -29,3 +29,7 @@ title-by-title game compatibility lists belong in more specialized projects.
 AI-assisted contributions are welcome when the submitter owns, understands,
 and can defend the result. Record the assisting partners in the contribution's
 provenance when their work materially shaped it.
+
+## Using an AI assistant
+
+Load [ai-skill/SKILL.md](ai-skill/SKILL.md) first. It carries these rules plus the verification discipline behind every entry, and it works with any assistant. Assistance is welcome and never held against you; see [PROVENANCE.md](PROVENANCE.md#on-slop).
