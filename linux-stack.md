@@ -19,7 +19,7 @@ implementation, not successful hardware output.
 | driver | readable HDR surface | current evidence boundary |
 |---|---|---|
 | i915/xe display | Connector properties and HDMI/DP metadata paths exist in-tree | Reference implementation; hardware coverage varies by generation. |
-| amdgpu DC | Connector properties, colour state, and HDMI/DP metadata paths exist in-tree | Community-repairable; individual colour/link defects still require hardware testing. |
+| amdgpu DC | Exposes `HDR_OUTPUT_METADATA`, `Colorspace`, and `max bpc` connector properties; prepares HDR metadata as an HDMI/DisplayPort InfoFrame | [Connector properties](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L3280-L3294); [HDR metadata handling](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L2518) |
 | nouveau | No HDR metadata property or DRM InfoFrame path in Linux 7.3-rc4 | [Source audit](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdr-gap-2026-09-22.md); implementation project, not output-tested HDR. |
 | proprietary NVIDIA | Open `nvidia-drm` glue exposes metadata and hands it to NVKMS | Output policy is closed; [#1384](https://github.com/NVIDIA/open-gpu-kernel-modules/issues/1384) asks NVIDIA to identify the ownership boundary. |
 
