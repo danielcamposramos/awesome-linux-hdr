@@ -146,6 +146,7 @@ Neither is reported as native HDR output.
 - [OpenColorIO](https://github.com/AcademySoftwareFoundation/OpenColorIO) -
   Production colour-management framework; adjacent to display HDR rather than
   a KMS implementation.
+- [Proton-CachyOS 11.0-20260601](https://github.com/CachyOS/proton-cachyos/releases/tag/cachyos-11.0-20260601-slr) - CachyOS's Proton build, released in June 2026, that detects and enables HDR in games automatically, with its Wine Wayland driver work, instead of per-game launch options; `DXVK_NO_HDR=1` turns it off, and its release notes say GNOME does not yet expose enough colour management for it. Reported (the release notes and [GamingOnLinux](https://www.gamingonlinux.com/2026/06/proton-cachyos-update-brings-automatic-hdr-wayland-improvements-and-more-bug-fixes/)), not measured here.
 
 ## Tools
 
