@@ -36,8 +36,6 @@ panel depth, and calibration-LUT precision are recorded separately.
   Records the addition of HDR formats through the CEA-861.3 extension.
 - [CTA-861.3-A official page](https://shop.cta.tech/products/cta-861-3) - HDR
   Static Metadata Data Block and Dynamic Range and Mastering InfoFrame.
-- [CTA-hosted CEA-861.3 preview](https://standards.cta.tech/kwspub/published_docs/CEA-861.3-Preview.pdf) -
-  Public preview suitable for checking the document's scope and field names.
 - [EDID 1.4](https://vesa.org/vesa-standards/) - Base display-identification
   framework; CTA extension blocks carry HDMI and HDR capabilities.
 
