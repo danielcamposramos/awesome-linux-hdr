@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0008"
+purpose = "Preserve native HDR output as locally untested because the measurement bench has no HDR sink."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0008"
+claim_sha256 = "76770e3f4176766d23992a77c30ca40e7882835206901ceb4abfe08e93a8543d"
+expected_reason = "UNTESTED"
+accept_superseded = false

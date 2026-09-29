@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0003"
+purpose = "Bind Daniel's physical observation that the HX855 accepted the nouveau 12-bpc test signal."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0003"
+claim_sha256 = "d9097d9b440bddb718e55266f49dac207cf71092942ea8095110182d6b7ecaa5"
+expected_reason = "SUPPORTED"
+accept_superseded = false

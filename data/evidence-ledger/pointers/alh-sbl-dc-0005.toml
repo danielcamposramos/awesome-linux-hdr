@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0005"
+purpose = "Bind Daniel's physical observation that the HX855 accepted the NVIDIA 12-bpc test signal."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0005"
+claim_sha256 = "33f4d873f7e16a8ac0e7ccddd1e8463b6ec14ac9723722dcfe3914f4f93a47a1"
+expected_reason = "SUPPORTED"
+accept_superseded = false

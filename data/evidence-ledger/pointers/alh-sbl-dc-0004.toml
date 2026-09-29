@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0004"
+purpose = "Bind the NVIDIA 615.71.09 parameter-state measurement used as the proprietary control."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0004"
+claim_sha256 = "49ce77fa9748c2e3e582dd183348fec13f4863f9381b290b8d14b4bf23fbc077"
+expected_reason = "SUPPORTED"
+accept_superseded = false

@@ -57,6 +57,10 @@ supports (10, 12, or 16 bpc). It does not mean tagging an SDR display as HDR.
   applications in signal order.
 - [Testing HDR honestly](testing.md) - A layered verification ladder that
   prevents property exposure from being mistaken for light on the wire.
+- [Federated Signal Ledger](docs/reference/evidence-ledger/pointers.md) -
+  Machine-checked pointers to the canonical Deep Color and 3D-plus-12-bpc
+  measurements, physical observations, and explicit HDR/16-bpc non-tests
+  this list consumes.
 - [Open implementation roadmap](roadmap.md) - nouveau deep colour first,
   followed by real-time HDR-to-SDR rendering over a high-bit-depth link.
 - [HDR-to-high-SDR prior art](prior-art.md) - Existing software and hardware

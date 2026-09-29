@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0007"
+purpose = "Preserve the local 16-bpc hardware gap as untested rather than positive or negative evidence."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0007"
+claim_sha256 = "1881aa2fcc59c9a4ec61e049bc87b980ab09c0ed33e1eefd1ccb887745bc16d7"
+expected_reason = "UNTESTED"
+accept_superseded = false

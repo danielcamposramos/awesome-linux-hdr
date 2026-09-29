@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0006"
+purpose = "Bind the bounded interpretation of the software-visible nouveau GCP payload without claiming cable emission."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0006"
+claim_sha256 = "7fe314935e7b9782145669b0d012d982fd9fbe5f329c931647cea134d96e7367"
+expected_reason = "SUPPORTED"
+accept_superseded = false

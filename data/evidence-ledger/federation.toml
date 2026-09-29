@@ -1,0 +1,43 @@
+schema = 1
+federation = "awesome-linux-hdr"
+view = "docs/reference/evidence-ledger/pointers.md"
+
+[[pointers]]
+path = "pointers/alh-sbl-3d-0001.toml"
+sha256 = "c096d9759ab1cc22b1003b309f453aafbbe453a8f9ec11efb61e8a30a8ca660d"
+
+[[pointers]]
+path = "pointers/alh-sbl-3d-0002.toml"
+sha256 = "d7ce68ca0f745b6bbe116cc5294439cef51d330c5d7ea4d4ecd62f298e387111"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0001.toml"
+sha256 = "7e7fe877c2e1d88f1914b34ab72fdd2a368916f9d6f08bc849e71579f8b692d0"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0002.toml"
+sha256 = "dfee0b734fd4b8a94f0c18184aed6c95800f7ca957ae10c59c4302119dbda2a9"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0003.toml"
+sha256 = "f04135649bfe7f7679ddc59f7f5d4349396db2b9e508121eaaed71355acd642b"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0004.toml"
+sha256 = "e020e12690a9ad3ae6648df2953aba04da14077ee3a93ebdc20f263fc3ce85da"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0005.toml"
+sha256 = "cc2167b3b977bf33ac13e33e0cc1994257179958d23c48926c354676fe128f19"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0006.toml"
+sha256 = "7974d6c947fa7a1231fa8106ae23263a21c21d53e99c4690814c69f287ee79e7"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0007.toml"
+sha256 = "ebf6f95a63703ae010be79ae71bfaa18dfc2f90524bc95d453213a11bd748038"
+
+[[pointers]]
+path = "pointers/alh-sbl-dc-0008.toml"
+sha256 = "1f4288afdbeebf31a6b5acfd4a8e9ab56267b02aab68b2745dfbda5b1a0f3049"

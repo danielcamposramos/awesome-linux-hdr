@@ -20,6 +20,14 @@ Nothing here treats generated text as measurement: source claims are tied to
 source, hardware claims to recorded hardware, and untested boundaries remain
 labelled.
 
+The federated Signal Ledger was designed through the real ACIG/MVCIC partner
+chain (Kimi K3, GLM, DeepSeek, Nemotron and Gemma completed; Qwen's lane
+returned HTTP 410), implemented by OpenAI Codex, and adversarially reviewed by
+another Codex partner. Those reviews are design provenance, not evidence.
+Daniel remains the named observer for physical sink behaviour; the consumer
+registry stores only semantic hashes and authority expectations for canonical
+claims in `sony-bravia-linux`.
+
 ## On slop
 
 Adapted from Daniel's comments on the [Consumer Rights Wiki AI usage policy talk page](https://consumerrights.wiki/w/Consumer_Rights_Wiki_talk:AI_usage_policy) (20 September 2026).

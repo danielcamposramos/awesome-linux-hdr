@@ -1,0 +1,10 @@
+schema = 1
+id = "ALH-SBL-DC-0002"
+purpose = "Bind the nouveau 12-bpc driver-state measurement used by the implementation roadmap."
+upstream_repository = "danielcamposramos/sony-bravia-linux"
+upstream_ref = "main"
+upstream_manifest = "data/evidence-ledger/ledger.toml"
+claim_id = "SBL-DC-0002"
+claim_sha256 = "0f8092d0715a203dfc19aa3d138f6ce21c2b7f104e208c1144e342704cb44c3a"
+expected_reason = "SUPPORTED"
+accept_superseded = false
