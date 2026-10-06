@@ -70,6 +70,7 @@ See [standards.md](standards.md) for the connected map and citation notes.
 - [Mutter](https://gitlab.gnome.org/GNOME/mutter) - GNOME's compositor and display server.
 - [wlroots](https://gitlab.freedesktop.org/wlroots/wlroots) - Reusable Wayland compositor library with DRM backends.
 - [gamescope](https://github.com/ValveSoftware/gamescope) - Valve's gaming compositor; useful for following HDR, Vulkan, and direct-display work.
+- [Kernel development for old AMD GPUs](https://indico.freedesktop.org/event/12/contributions/545/) - Timur Kristóf (Valve), XDC 2026 ([slides](https://indico.freedesktop.org/event/12/contributions/545/attachments/380/545/xdc2026_kernel_dev_old_amd_gpus.pdf)): GCN 1.0 and 1.1 Radeons now default to amdgpu and its DC display code; the old radeon driver had no atomic modesetting and no HDR, so the display path, not the GPU's age, decided what these cards could output.
 
 The per-driver implementation map lives in [linux-stack.md](linux-stack.md).
 
