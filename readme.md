@@ -74,6 +74,19 @@ See [standards.md](standards.md) for the connected map and citation notes.
 
 The per-driver implementation map lives in [linux-stack.md](linux-stack.md).
 
+### HDR on the two main desktops, release by release
+
+KDE Plasma (KWin):
+- [Plasma 6.0](https://kde.org/announcements/megarelease/6/) - February 2024: partial HDR on Wayland, and an ICC profile per screen.
+- [Plasma 6.4](https://kde.org/announcements/plasma/6/6.4.0/) - An HDR calibration wizard in the Display and Monitor settings, and Extended Dynamic Range on screens that offer it.
+- [Plasma 6.6](https://linuxiac.com/plasma-6-6-desktop-improves-system-monitor-and-hdr-calibration/) - The calibrator gains a summary page and an option that follows Windows' HDR behaviour for games; version 2 of the Wayland colour-management protocol, which removes glitches in Firefox's experimental HDR mode.
+- [Plasma 6.7](https://kde.org/announcements/plasma/6/6.7.0/) - An ICC profile and HDR content at the same time; [6.7.5](https://www.linuxjournal.com/content/kde-plasma-675-released-discover-kwin-wayland-and-hdr-fixes) (8 September 2026) refines HDR content under an active ICC profile.
+
+GNOME (Mutter):
+- [GNOME 48](https://release.gnome.org/48/) - March 2025: the first system-level HDR, with a per-monitor HDR switch in Settings > Display.
+- [GNOME 49](https://release.gnome.org/49/) - Wallpapers made for HDR and Display P3, rendered at their full 16 bits per channel by Mutter's colour management, and HDR brightness in Quick Settings.
+- [GNOME 50](https://release.gnome.org/50/) - Version 2 of the Wayland colour-management protocol, and HDR screen sharing on the colour pipeline.
+
 ## Project roadmap
 
 The first owned-hardware programme deliberately does not require an HDR display: enable a standards-bounded 12-bpc nouveau HDMI link to an SDR Sony KDL-46HX855, then render HDR10/HLG sources through a high-precision real-time tone mapper into a 10-bit scanout buffer carried by that 12-bpc link. amdgpu is the open implementation reference; the proprietary NVIDIA stack is a measured behavioural control and an API reference where its glue is open.
