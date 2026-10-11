@@ -67,6 +67,7 @@ See [standards.md](standards.md) for the connected map and citation notes.
 - [Mesa](https://gitlab.freedesktop.org/mesa/mesa) - OpenGL/Vulkan drivers and WSI paths between applications, compositors, and KMS.
 - [Wayland protocols](https://gitlab.freedesktop.org/wayland/wayland-protocols) - Home of the standardized colour-management protocol.
 - [KWin](https://invent.kde.org/plasma/kwin) - KDE's Wayland compositor and one open implementation of HDR and colour-management policy.
+- [Sparky Stereo OS](https://github.com/Sparky-OS/sparky-stereo-os) - A SparkyLinux edition on KDE Plasma, in development, that sends the deepest colour the display declares by default: its KWin starts new outputs at "prefer colour accuracy" (KWin's own default, "prefer efficiency", caps the link at 10 bits per channel), its NVIDIA open kernel module follows the EDID's deep colour (DC_30, DC_36, DC_48), and its nouveau reaches 16 bits per channel on Turing and newer.
 - [Mutter](https://gitlab.gnome.org/GNOME/mutter) - GNOME's compositor and display server.
 - [wlroots](https://gitlab.freedesktop.org/wlroots/wlroots) - Reusable Wayland compositor library with DRM backends.
 - [gamescope](https://github.com/ValveSoftware/gamescope) - Valve's gaming compositor; useful for following HDR, Vulkan, and direct-display work.
