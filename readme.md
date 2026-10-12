@@ -1,10 +1,15 @@
 # Awesome Linux HDR [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23308063.svg)](https://doi.org/10.5281/zenodo.23308063)
 
-> Linux HDR from specification to photons: formats, metadata, DRM/KMS, drivers, compositors, applications, diagnostics, and measurement.
+> Linux HDR and deep colour from specification to photons: formats, metadata, the kernel's display layer (DRM/KMS), drivers, compositors, applications, diagnostics, and measurement.
 
-HDR is not one switch. A working path must preserve transfer function, colour primaries, mastering metadata, pixel depth, link format, and display state across every layer. This list follows that chain and records where it can be inspected and repaired.
+**Use it to** find out whether your screen, GPU, desktop and player can show HDR and deep colour on Linux, and where the chain breaks.
+HDR is not one switch.
+A working path must keep the picture's brightness curve, its colours, its metadata and its bit depth intact through every layer, from the file to the cable: in the specifications' words, the transfer function, colour primaries, mastering metadata, pixel depth, link format and display state.
+This list follows that chain and records where it can be inspected and repaired.
 
-*AI was leveraged as a partner in the development of this work — [more information here](PROVENANCE.md).*
+**New to it?** Start with [From one bit to HDR](colour-depth-explained.md), then [Testing HDR honestly](testing.md).
+
+*AI was leveraged as a partner in the development of this work: [more information here](PROVENANCE.md).*
 
 ## Contents
 
