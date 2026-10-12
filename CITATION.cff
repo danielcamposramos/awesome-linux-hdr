@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this list, please cite it as below."
+type: dataset
+title: "awesome-linux-hdr: Linux HDR from specification to photons"
+abstract: "Linux HDR from specification to photons: standards, DRM/KMS, drivers, compositors, applications, diagnostics, and measurement, with deep colour (10, 12 and 16 bits per channel)."
+authors:
+  - family-names: "Ramos"
+    given-names: "Daniel Campos"
+    orcid: "https://orcid.org/0009-0001-4546-8673"
+license: CC0-1.0
+repository-code: "https://github.com/danielcamposramos/awesome-linux-hdr"
+keywords:
+  - "HDR"
+  - "high dynamic range"
+  - "deep colour"
+  - "Linux"
+  - "DRM/KMS"
+  - "Wayland"
+  - "colour management"
