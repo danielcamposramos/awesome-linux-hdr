@@ -1,4 +1,4 @@
-# Awesome Linux HDR [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Linux HDR [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23308063.svg)](https://doi.org/10.5281/zenodo.23308063)
 
 > Linux HDR from specification to photons: formats, metadata, DRM/KMS, drivers, compositors, applications, diagnostics, and measurement.
 
