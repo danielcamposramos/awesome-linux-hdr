@@ -1,6 +1,8 @@
 # Photography and video: HDR and deep colour from capture to delivery
 
-The display chain in this list starts where an image already exists. This page follows the image before that: how cameras capture more than 8 bits, how the formats keep or lose that depth, and which Linux tools preserve it. The scope rule matches [awesome-stereoscopy](https://github.com/danielcamposramos/awesome-stereoscopy)'s capture sections: signal-chain facts, not photography technique.
+The display chain in this list starts where an image already exists.
+This page follows the image before that: how cameras capture more than 8 bits, how the formats keep or lose that depth, and which Linux tools preserve it.
+The scope rule matches [awesome-stereoscopy](https://github.com/danielcamposramos/awesome-stereoscopy)'s capture sections: signal-chain facts, not photography technique.
 
 ## Two meanings of "HDR"
 
@@ -9,7 +11,9 @@ The most common confusion in this subject is a name clash.
 - **HDR imaging** (photography, rendering) captures or computes more scene dynamic range than one exposure holds, usually by merging bracketed exposures, and has existed since the 1990s. Its results were long **tone-mapped back to SDR** for ordinary screens and prints, which produced the familiar "HDR photo" look.
 - **HDR display signals** (video, and now stills) send a wider luminance range to a capable display using PQ or HLG, BT.2020 primaries and metadata; see [From one bit to HDR](colour-depth-explained.md#where-hdr-is-different).
 
-An "HDR photo" from the 2000s is an SDR image. A 2020s gain-map photo or HDR10 video is an HDR signal. Both are legitimate; they are different things.
+An "HDR photo" from the 2000s is an SDR image.
+A 2020s gain-map photo or HDR10 video is an HDR signal.
+Both are legitimate; they are different things.
 
 ## History
 

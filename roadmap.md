@@ -12,9 +12,12 @@ The executable experiment and recovery transaction are maintained in the [nouvea
 
 This is comparison for semantics and validation, not code transplantation from a closed component.
 
-## Phase A — 12-bpc HDMI on nouveau
+## Phase A: 12-bpc HDMI on nouveau
 
-**Status 2026-09-22: measured and submitted.** The Sony OSD reported 12-bit and 10-bit links from nouveau on the GA106, including 3D at 12 bpc, and a follow-on added limited/full RGB and YCbCr 4:4:4/4:2:2/4:2:0 (25 configurations measured; 4:2:0 and 48 bpp are implemented, not measured). Both series are on dri-devel, linked from the readme's repair maps. The `link bpc` item below remains open.
+**Status 2026-09-22: measured and submitted.**
+The Sony OSD reported 12-bit and 10-bit links from nouveau on the GA106, including 3D at 12 bpc, and a follow-on added limited/full RGB and YCbCr 4:4:4/4:2:2/4:2:0 (25 configurations measured; 4:2:0 and 48 bpp are implemented, not measured).
+Both series are on dri-devel, linked from the readme's repair maps.
+The `link bpc` item below remains open.
 
 ### Source work
 
@@ -37,7 +40,8 @@ That result is deep-colour transport evidence, not HDR output.
 
 ### Preserve the proven 3D layer
 
-Deep-colour testing must not silently replace the stereoscopic fixes that led to this investigation. After an ordinary 1080p60/12-bpc pass, repeat the link test with the existing 3D implementation still active:
+Deep-colour testing must not silently replace the stereoscopic fixes that led to this investigation.
+After an ordinary 1080p60/12-bpc pass, repeat the link test with the existing 3D implementation still active:
 
 | driver | 3D implementation retained | depth path tested |
 |---|---|---|
@@ -45,13 +49,16 @@ Deep-colour testing must not silently replace the stereoscopic fixes that led to
 | nouveau | stock, hardware-proven VSIF and frame-packing path | experimental 12-bpc nouveau delta |
 | proprietary NVIDIA | project's v2 EDID/VSDB 3D-mode synthesis | closed NVKMS result, presently measured at 10-bit |
 
-The target combinations are 1080p60 SBS-half, 1080p60 top-and-bottom, and 1080p24/720p60 frame packing. Each reaches a 148.5 MHz base transport rate; the 12-bpc multiplier produces 222.75 MHz, just inside the owned sink's 225 MHz declaration. The 3D VSIF and deep-colour General Control Packet are separate HDMI packet responsibilities, so combined success is its own acceptance gate.
+The target combinations are 1080p60 SBS-half, 1080p60 top-and-bottom, and 1080p24/720p60 frame packing.
+Each reaches a 148.5 MHz base transport rate; the 12-bpc multiplier produces 222.75 MHz, just inside the owned sink's 225 MHz declaration.
+The 3D VSIF and deep-colour General Control Packet are separate HDMI packet responsibilities, so combined success is its own acceptance gate.
 
-## Phase B — real-time HDR-to-SDR at high precision
+## Phase B: real-time HDR-to-SDR at high precision
 
 ### The cross-vendor gap
 
-This is not a missing tone-mapping equation. The components exist but do not form one dependable product path:
+This is not a missing tone-mapping equation.
+The components exist but do not form one dependable product path:
 
 - libplacebo/mpv can tone-map HDR video to SDR in real time;
 - [gamescope contains a PQ-to-gamma-2.2 path](https://github.com/ValveSoftware/gamescope/blob/master/src/steamcompmgr.cpp), yet output selection remains fragile enough for live reports of [HDR falling back to an 8-bit link](https://github.com/ValveSoftware/gamescope/issues/2075);
@@ -74,7 +81,10 @@ BT.709 SDR, 16-bit/float scanout where supported; otherwise XR30
 highest verified 10/12/16-bpc RGB link → SDR display
 ```
 
-The working target is FP16 or an equivalently justified high-precision format. The preferred scanout tier is a supported 16-bit integer/float DRM format; `XR30` is the practical 10-bit fallback. Scanout precision and cable precision remain independent: a 10-bit buffer may be carried by a 12-bpc HDMI link, while a 16-bit buffer may still be quantized to a 10- or 12-bpc link. Every narrowing must be measured and reported.
+The working target is FP16 or an equivalently justified high-precision format.
+The preferred scanout tier is a supported 16-bit integer/float DRM format; `XR30` is the practical 10-bit fallback.
+Scanout precision and cable precision remain independent: a 10-bit buffer may be carried by a 12-bpc HDMI link, while a 16-bit buffer may still be quantized to a 10- or 12-bpc link.
+Every narrowing must be measured and reported.
 
 ### Prototype order
 
@@ -96,8 +106,10 @@ The working target is FP16 or an equivalently justified high-precision format. T
 - every vendor either reaches the requested tier or returns an explicit, recorded fallback;
 - objective pixel comparison passes before subjective banding observations are recorded.
 
-## Phase C — native HDR later
+## Phase C: native HDR later
 
-Only after the deep-colour path is understood should nouveau expose `HDR_OUTPUT_METADATA`, Colorspace, construct the 30-byte DRM InfoFrame, and emit it through the generation-specific generic packet route. Final acceptance then requires an HDR sink or protocol analyzer.
+Only after the deep-colour path is understood should nouveau expose `HDR_OUTPUT_METADATA`, Colorspace, construct the 30-byte DRM InfoFrame, and emit it through the generation-specific generic packet route.
+Final acceptance then requires an HDR sink or protocol analyzer.
 
-Phase B is therefore not a consolation prize. It produces a useful open high-quality path for excellent SDR displays while Phase C acquires the hardware needed for native-HDR validation.
+Phase B is therefore not a consolation prize.
+It produces a useful open high-quality path for excellent SDR displays while Phase C acquires the hardware needed for native-HDR validation.

@@ -7,7 +7,8 @@ HDR is not one switch.
 A working path must keep the picture's brightness curve, its colours, its metadata and its bit depth intact through every layer, from the file to the cable: in the specifications' words, the transfer function, colour primaries, mastering metadata, pixel depth, link format and display state.
 This list follows that chain and records where it can be inspected and repaired.
 
-**New to it?** Start with [From one bit to HDR](colour-depth-explained.md), then [Testing HDR honestly](testing.md).
+**New to it?**
+Start with [From one bit to HDR](colour-depth-explained.md), then [Testing HDR honestly](testing.md).
 
 *AI was leveraged as a partner in the development of this work: [more information here](PROVENANCE.md).*
 
@@ -35,9 +36,11 @@ Entries and project claims should keep these evidence classes separate:
 - **Reported** — a third party describes a result that has not been locally reproduced.
 - **Proposed** — a design or patch exists but has not completed validation.
 
-Deep colour, wide colour gamut, and HDR are related but not interchangeable. A 12-bpc link is useful transport evidence; it is not by itself proof of an HDR transfer function or metadata reaching the display.
+Deep colour, wide colour gamut, and HDR are related but not interchangeable.
+A 12-bpc link is useful transport evidence; it is not by itself proof of an HDR transfer function or metadata reaching the display.
 
-**High-SDR** in this project means HDR decoded and tone/gamut-mapped in real time through a 16-bit or floating-point working pipeline, then delivered as ordinary SDR using the highest verified scanout and link precision the output supports (10, 12, or 16 bpc). It does not mean tagging an SDR display as HDR.
+**High-SDR** in this project means HDR decoded and tone/gamut-mapped in real time through a 16-bit or floating-point working pipeline, then delivered as ordinary SDR using the highest verified scanout and link precision the output supports (10, 12, or 16 bpc).
+It does not mean tagging an SDR display as HDR.
 
 ## Start here
 
@@ -49,7 +52,7 @@ Deep colour, wide colour gamut, and HDR are related but not interchangeable. A 1
 - [Testing HDR honestly](testing.md) - A layered verification ladder that prevents property exposure from being mistaken for light on the wire.
 - [Federated Signal Ledger](docs/reference/evidence-ledger/pointers.md) - Machine-checked pointers to the canonical Deep Color and 3D-plus-12-bpc measurements, physical observations, and explicit HDR/16-bpc non-tests this list consumes.
 - [Open implementation roadmap](roadmap.md) - nouveau deep colour first, followed by real-time HDR-to-SDR rendering over a high-bit-depth link.
-- [HDR-to-high-SDR prior art](prior-art.md) - Existing software and hardware processors, the owner-provided Gemini assessment, and the remaining open Linux integration gap.
+- [HDR-to-high-SDR prior art](prior-art.md) - Existing software and hardware processors, Daniel's Gemini assessment, and the remaining open Linux integration gap.
 - [Linux DRM KMS documentation](https://docs.kernel.org/gpu/drm-kms.html) - The kernel's display-mode-setting architecture.
 - [Wayland color-management-v1](https://wayland.app/protocols/color-management-v1) - The protocol for communicating image descriptions and output colour state.
 
@@ -97,9 +100,13 @@ GNOME (Mutter):
 
 The first owned-hardware programme deliberately does not require an HDR display: enable a standards-bounded 12-bpc nouveau HDMI link to an SDR Sony KDL-46HX855, then render HDR10/HLG sources through a high-precision real-time tone mapper into a 10-bit scanout buffer carried by that 12-bpc link. amdgpu is the open implementation reference; the proprietary NVIDIA stack is a measured behavioural control and an API reference where its glue is open.
 
-The wider target is cross-vendor **HDR-to-high-SDR on the fly**. Linux already has tone-mapping algorithms, 16-bit integer/float DRM formats, and individual high-bpc driver paths, but not one automatic, measured contract that preserves that precision from HDR metadata to an SDR sink across AMD, Intel, NVIDIA, and nouveau.
+The wider target is cross-vendor **HDR-to-high-SDR on the fly**.
+Linux already has tone-mapping algorithms, 16-bit integer/float DRM formats, and individual high-bpc driver paths, but not one automatic, measured contract that preserves that precision from HDR metadata to an SDR sink across AMD, Intel, NVIDIA, and nouveau.
 
-See [roadmap.md](roadmap.md) for the separable acceptance gates. A 12-bpc OSD result proves link training. Correct HDR-to-SDR pixels prove the render path. Neither is reported as native HDR output.
+See [roadmap.md](roadmap.md) for the separable acceptance gates.
+A 12-bpc OSD result proves link training.
+Correct HDR-to-SDR pixels prove the render path.
+Neither is reported as native HDR output.
 
 ## Rendering and playback
 
@@ -128,7 +135,10 @@ See [roadmap.md](roadmap.md) for the separable acceptance gates. A 12-bpc OSD re
 - [AV1 test vectors](https://aomedia.googlesource.com/av1-test-vectors/) - Alliance for Open Media decoder conformance material.
 - [Testing guide](testing.md) - Separates source inspection, property checks, atomic acceptance, packet observation, sink indication, and photometric measurement.
 
-An HDMI protocol analyzer can prove InfoFrame bytes. A display OSD can prove the mode the sink says it received. A colorimeter or spectroradiometer can measure luminance and chromaticity. None substitutes for all the others.
+An HDMI protocol analyzer can prove InfoFrame bytes.
+A display OSD can prove the mode the sink says it received.
+A colorimeter or spectroradiometer can measure luminance and chromaticity.
+None substitutes for all the others.
 
 ## Repair maps and case studies
 

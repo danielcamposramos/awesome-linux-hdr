@@ -1,6 +1,7 @@
 # Federated Signal Ledger pointers
 
-Generated from local pointer files and live upstream append-only ledgers. Do not edit this view.
+Generated from local pointer files and live upstream append-only ledgers.
+Do not edit this view.
 Pointer digest: `abb42fdc687eecb8a1f65cf86bf201b58f384b086dfa2573cb30808ddbda959c`.
 
 | Pointer | Upstream claim | State | Purpose |
