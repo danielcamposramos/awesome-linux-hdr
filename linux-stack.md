@@ -1,6 +1,7 @@
 # Linux HDR stack map
 
-The signal path is ordered from the display inward. A link in source proves implementation, not successful hardware output.
+The signal path is ordered from the display inward.
+A link in source proves implementation, not successful hardware output.
 
 ## Kernel common layer
 

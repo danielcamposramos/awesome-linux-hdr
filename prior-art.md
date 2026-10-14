@@ -2,9 +2,11 @@
 
 ## Owner-provided research lead
 
-On 2026-09-22 Daniel supplied a Gemini answer identifying “real-time HDR-to-SDR tone mapping with high bit-depth output” as the established way to use HDR masters on high-quality SDR projectors and professional displays. Its central engineering claim is retained: tone/gamut mapping should run at high internal precision and the final SDR signal should avoid an unnecessary 8-bit bottleneck when the display path supports more.
+On 2026-09-22 Daniel supplied a Gemini answer identifying “real-time HDR-to-SDR tone mapping with high bit-depth output” as the established way to use HDR masters on high-quality SDR projectors and professional displays.
+Its central engineering claim is retained: tone/gamut mapping should run at high internal precision and the final SDR signal should avoid an unnecessary 8-bit bottleneck when the display path supports more.
 
-The answer is recorded as a research lead, not a primary source. Four phrases are narrowed for the public technical record:
+The answer is recorded as a research lead, not a primary source.
+Four phrases are narrowed for the public technical record:
 
 - dynamic tone mapping may be frame-, scene-, histogram-, or metadata-driven;
 - higher output bpc preserves finer code-value precision, but does not by itself preserve the source gamut or mastering display;
@@ -19,7 +21,9 @@ It also usefully separates luminance mapping from precision preservation, but th
 | scanout | pixels stored in the DRM framebuffer/plane | 16-bit integer/float when supported; XR30 fallback |
 | link | code words physically transported to the sink | highest verified sink- and bandwidth-valid 10/12/16 bpc |
 
-A 16-bit processing or scanout surface can still be quantized onto a 10- or 12-bpc HDMI link. Conversely, a 10-bit framebuffer can be transported in a 12-bpc link container without creating source precision. Every report must name the stage instead of collapsing all three into “16-bit output.”
+A 16-bit processing or scanout surface can still be quantized onto a 10- or 12-bpc HDMI link.
+Conversely, a 10-bit framebuffer can be transported in a 12-bpc link container without creating source precision.
+Every report must name the stage instead of collapsing all three into “16-bit output.”
 
 ## Software precedent
 
@@ -33,7 +37,8 @@ A 16-bit processing or scanout surface can still be quantized onto a 10- or 12-b
 - [Lumagen Radiance Pro](https://www.lumagen.com/products-sales/p/explore-radiance-pro) documents HDR dynamic tone mapping and a 12-bit 4:2:2 video pipeline.
 - [Lumagen's update history](https://www.lumagen.com/software-updates/radiance-pro-updates) records continuing dynamic-tone-mapping work and 12-bit LUT precision.
 
-These products prove demand and feasibility. They do not close the Linux gap: their processing and hardware policy are proprietary, and they do not provide a shared DRM contract across GPU vendors.
+These products prove demand and feasibility.
+They do not close the Linux gap: their processing and hardware policy are proprietary, and they do not provide a shared DRM contract across GPU vendors.
 
 ## What remains new and useful
 
@@ -47,4 +52,4 @@ The project target is an open, vendor-neutral path that:
 6. preserves display calibration and performs a deliberate final dither;
 7. produces the same evidence table on amdgpu, i915, nouveau, and proprietary NVIDIA.
 
-That integration and observability layer—not the invention of tone mapping—is the cross-maker gap this project aims to close.
+That integration and observability layer, not the invention of tone mapping: is the cross-maker gap this project aims to close.

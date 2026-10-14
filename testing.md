@@ -1,6 +1,7 @@
 # Testing HDR honestly
 
-HDR validation is a ladder. Passing one rung does not imply the next.
+HDR validation is a ladder.
+Passing one rung does not imply the next.
 
 ## Evidence ladder
 
@@ -36,9 +37,12 @@ Deep colour is a useful prerequisite test when no HDR sink is available:
 6. read the sink's own signal-information OSD;
 7. return to the known-good mode and verify the desktop.
 
-An OSD report of 12 bits is measured link evidence. It does not establish PQ, HLG, HDR metadata, or photometric correctness.
+An OSD report of 12 bits is measured link evidence.
+It does not establish PQ, HLG, HDR metadata, or photometric correctness.
 
-The first owned-hardware experiment is fully specified in the Bravia research record: [nouveau HDMI deep-colour hardware plan](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdmi-deep-colour-plan-2026-09-22.md). Its 1080p60/12-bpc RGB rate is 222.75 MHz against the sink EDID's 225 MHz ceiling. The 1% margin makes exact arithmetic, fixed cabling, and a sink OSD reading part of the acceptance criteria.
+The first owned-hardware experiment is fully specified in the Bravia research record: [nouveau HDMI deep-colour hardware plan](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdmi-deep-colour-plan-2026-09-22.md).
+Its 1080p60/12-bpc RGB rate is 222.75 MHz against the sink EDID's 225 MHz ceiling.
+The 1% margin makes exact arithmetic, fixed cabling, and a sink OSD reading part of the acceptance criteria.
 
 ## HDR-to-high-SDR test
 
@@ -48,12 +52,13 @@ Keep input, mapping, scanout, and link evidence independent:
 2. render a deterministic HDR fixture through the named tone- and gamut-map settings at FP16 or higher justified working precision;
 3. compare output pixel values against a preserved 16-bit offline reference;
 4. identify the actual DRM framebuffer/plane format—renderer precision is not proof of scanout precision;
-5. identify the achieved physical link depth from an immutable connector property, sink OSD, or analyzer—requested `max bpc` is not achieved bpc;
+5. identify the achieved physical link depth from an immutable connector property, sink OSD, or analyzer: requested `max bpc` is not achieved bpc;
 6. verify the output remains SDR (for example BT.709/gamma target) and does not advertise PQ/HLG or HDR static metadata;
 7. hold mapping and display settings fixed while comparing 8-, 10-, 12-, and 16-bit stages that the actual path supports;
 8. record deliberate final dithering separately from accidental truncation.
 
-This matrix tests the cross-vendor integration gap. It does not present mpv, libplacebo, gamescope, madVR, or Lumagen's already existing tone-mapping work as a new algorithm.
+This matrix tests the cross-vendor integration gap.
+It does not present mpv, libplacebo, gamescope, madVR, or Lumagen's already existing tone-mapping work as a new algorithm.
 
 ## Safety
 
@@ -75,4 +80,5 @@ This matrix tests the cross-vendor integration gap. It does not present mpv, lib
 | sink state | pass/fail/not available | OSD or service readout |
 | photometric output | pass/fail/not measured | instrument and method |
 
-Use “not measured” freely. It is more useful than collapsing the stack into a single “HDR works” checkbox.
+Use “not measured” freely.
+It is more useful than collapsing the stack into a single “HDR works” checkbox.

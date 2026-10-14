@@ -1,6 +1,7 @@
 # From one bit to HDR: colour depth explained
 
-How many colours a system can show, why each step was taken, what more bits do and do not buy, and where HDR departs from "just more bits". Figures are exact powers of two; sources are linked where a claim is not arithmetic.
+How many colours a system can show, why each step was taken, what more bits do and do not buy, and where HDR departs from "just more bits".
+Figures are exact powers of two; sources are linked where a claim is not arithmetic.
 
 ## The ladder
 
@@ -18,7 +19,9 @@ How many colours a system can show, why each step was taken, what more bits do a
 | 36 | 4,096 | 68,719,476,736 | 12-bit deep colour |
 | 48 | 65,536 | 281,474,976,710,656 | 16-bit deep colour |
 
-Up to 8 bits, the number is usually an **index** into a palette: 256 entries chosen from a larger range (VGA picked its 256 from 262,144). From 15 bits up, the number **is** the colour, split into red, green and blue. In 5-6-5, green gets the extra bit because the eye is most sensitive to it.
+Up to 8 bits, the number is usually an **index** into a palette: 256 entries chosen from a larger range (VGA picked its 256 from 262,144).
+From 15 bits up, the number **is** the colour, split into red, green and blue.
+In 5-6-5, green gets the extra bit because the eye is most sensitive to it.
 
 "32-bit colour" is 24 bits of colour plus 8 bits of alpha or padding; it shows no more colours than 24-bit. `XRGB2101010` spends the same 32 bits as 10-10-10 colour with 2 bits spare.
 
@@ -41,15 +44,19 @@ Up to 8 bits, the number is usually an **index** into a palette: 256 entries cho
 
 ## Where HDR is different
 
-HDR is not a deeper version of SDR. It changes four things at once:
+HDR is not a deeper version of SDR.
+It changes four things at once:
 
 1. **Luminance range.** The PQ curve ([ST 2084](https://en.wikipedia.org/wiki/Perceptual_quantizer)) encodes 0 to 10,000 cd/m², against the roughly 100 cd/m² that SDR television was designed around.
 2. **Transfer function.** PQ is built on human perception of banding and is designed to show no visible banding at 12 bits; HDR10 uses 10. HLG takes a different, backward-compatible approach. Both are defined in [BT.2100](https://www.itu.int/rec/R-REC-BT.2100/en), explained in ITU's [Report BT.2390](https://www.itu.int/pub/R-REP-BT.2390).
 3. **Gamut.** BT.2020 primaries as the container, wider than BT.709.
 4. **Metadata.** Mastering-display and content-light information travels to the display, which maps the content to what it can actually show.
 
-So a 12-bit SDR link is deep colour, not HDR: same curve, same gamut, finer steps. HDR content can still be tone-mapped to SDR and carried on that link, which is this list's [high-SDR](readme.md#how-to-read-this-list) goal.
+So a 12-bit SDR link is deep colour, not HDR: same curve, same gamut, finer steps.
+HDR content can still be tone-mapped to SDR and carried on that link, which is this list's [high-SDR](readme.md#how-to-read-this-list) goal.
 
 ## Floating point
 
-Compositors and renderers increasingly work in 16-bit floating point, for example [scRGB](https://en.wikipedia.org/wiki/ScRGB): linear light, with values above 1.0 for HDR highlights and below 0 for colours outside the sRGB gamut. The colour count stops being a useful number; precision is relative to the value, like a camera's exposure. The final output is still quantized to the link's 8, 10, 12 or 16 bits, and that last step is where depth is won or lost.
+Compositors and renderers increasingly work in 16-bit floating point, for example [scRGB](https://en.wikipedia.org/wiki/ScRGB): linear light, with values above 1.0 for HDR highlights and below 0 for colours outside the sRGB gamut.
+The colour count stops being a useful number; precision is relative to the value, like a camera's exposure.
+The final output is still quantized to the link's 8, 10, 12 or 16 bits, and that last step is where depth is won or lost.

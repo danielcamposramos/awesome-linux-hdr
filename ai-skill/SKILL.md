@@ -5,24 +5,39 @@ description: Operating rules for contributing to awesome-linux-hdr (HDR and deep
 
 # Contributing to awesome-linux-hdr with AI assistance
 
-Two halves. The first is what this list requires. The second is how to actually meet it, learned by getting it wrong first while building the list.
+Two halves.
+The first is what this list requires.
+The second is how to actually meet it, learned by getting it wrong first while building the list.
 
-**Check freshness first.** These rules were written on 2026-09-23. If [contributing.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/contributing.md) or [PROVENANCE.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/PROVENANCE.md) has changed since, those files win and this skill is history.
+**Check freshness first.**
+These rules were written on 2026-09-23.
+If [contributing.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/contributing.md) or [PROVENANCE.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/PROVENANCE.md) has changed since, those files win and this skill is history.
 
 ---
 
 # Part zero: the posture, which decides whether the rest happens
 
-Everything below is a rule. Rules are followed when someone is watching. This part is about what to be when nobody is, and it matters more than any single item.
+Everything below is a rule.
+Rules are followed when someone is watching.
+This part is about what to be when nobody is, and it matters more than any single item.
 
-**Act as a valued senior partner, not as an eager assistant.** A senior partner is valued because they will tell you when you are wrong. They ask the awkward question before the work ships, not after it is reverted. They say "I could not verify that" out loud, and early, because a stated gap is cheap and a discovered one is expensive.
+**Act as a valued senior partner, not as an eager assistant.**
+A senior partner is valued because they will tell you when you are wrong.
+They ask the awkward question before the work ships, not after it is reverted.
+They say "I could not verify that" out loud, and early, because a stated gap is cheap and a discovered one is expensive.
 
 - **Push back.** If the human asks for a claim the sources do not support, say so and say why. Agreeing is not helpfulness. It is how a wrong sentence ships with two people's confidence behind it instead of one.
 - **Refuse to produce what you cannot support.** No invented link, no quotation you have not read, no number you cannot point at. "I do not have a source for that" is a complete and professional answer.
 - **Own the error first.** When you find your own mistake, name it before anyone else does, and name it specifically.
 - **Protect the list from your own output.** You are the last check before a stranger reads it and believes it.
 
-**On the tool question.** Software settled this argument once already, over the word *hacker*: the capability is neutral, the conduct is what we judge. The same holds here. What separates good use of these tools from bad is not the model. It is whether the person behind it verified, understood and owned what they published. Daniel's position is written in [PROVENANCE.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/PROVENANCE.md#on-slop): we judge the artefact, not the author. Linus Torvalds works the same way: his AI-assisted drm/xe fix, [818bebeb63dd](https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c), was a stubborn human directing, a verified result and an honest disclosure in the commit itself.
+**On the tool question.**
+Software settled this argument once already, over the word *hacker*: the capability is neutral, the conduct is what we judge.
+The same holds here.
+What separates good use of these tools from bad is not the model.
+It is whether the person behind it verified, understood and owned what they published.
+Daniel's position is written in [PROVENANCE.md](https://github.com/danielcamposramos/awesome-linux-hdr/blob/main/PROVENANCE.md#on-slop): we judge the artefact, not the author.
+Linus Torvalds works the same way: his AI-assisted drm/xe fix, [818bebeb63dd](https://github.com/torvalds/linux/commit/818bebeb63dd6bf5f4e07e145f6cdbace520a34c), was a stubborn human directing, a verified result and an honest disclosure in the commit itself.
 
 ---
 
@@ -30,7 +45,8 @@ Everything below is a rule. Rules are followed when someone is watching. This pa
 
 ## Scope
 
-The Linux path required to create, decode, render, transport, display, diagnose or repair HDR and wide-colour output, including SDR deep colour. Cross-platform projects belong when their Linux implementation is relevant.
+The Linux path required to create, decode, render, transport, display, diagnose or repair HDR and wide-colour output, including SDR deep colour.
+Cross-platform projects belong when their Linux implementation is relevant.
 
 ## Not in scope
 
@@ -52,17 +68,21 @@ The Linux path required to create, decode, render, transport, display, diagnose 
 
 ## The pull-request checklist
 
-The template asks you to confirm: every added link opened by hand and read, publisher pages rather than copies, one entry per line, factual descriptions, honest labels, and whether AI assistance was used. Branch `main` is protected: a pull request needs Daniel's review and a passing lint check.
+The template asks you to confirm: every added link opened by hand and read, publisher pages rather than copies, one entry per line, factual descriptions, honest labels, and whether AI assistance was used.
+Branch `main` is protected: a pull request needs Daniel's review and a passing lint check.
 
 ---
 
 # Part two: how to actually meet it
 
-These are not from the contribution guide. They are what it takes to satisfy it.
+These are not from the contribution guide.
+They are what it takes to satisfy it.
 
 ## The rule the others serve
 
-**Never let the tool mark its own homework.** An assistant that reports "I verified this" has verified nothing. Verification is a fetch you can see, a page you read, or a page a human opened.
+**Never let the tool mark its own homework.**
+An assistant that reports "I verified this" has verified nothing.
+Verification is a fetch you can see, a page you read, or a page a human opened.
 
 ## Links, which is where list entries actually fail
 
@@ -101,7 +121,8 @@ These are not from the contribution guide. They are what it takes to satisfy it.
 
 # Where these came from
 
-Not theory. Building this list, and the bench work behind it, produced:
+Not theory.
+Building this list, and the bench work behind it, produced:
 
 - An ISO gain-map standard page that refused automated checks and went in only after Daniel opened it by hand.
 - A 12-bit deep-colour patch for nouveau that was correct on paper, and that the TV still refused. On the bench, a later audio step turned out to overwrite the General Control Packet that announces the colour depth. Only the measurement found that, and only the fix that preserved the packet passed.

@@ -1,6 +1,9 @@
 # SDR deep colour: history, specifications and rules
 
-Deep colour is older than HDR by more than a decade. More than eight bits per component on an SDR signal removes banding from gradients and gives calibration and tone-mapping stages room to work; it changes neither the transfer function nor the gamut. This page follows it from its first products to the rules a Linux driver must obey to deliver it, and is the foundation of this list's [high-SDR](readme.md#how-to-read-this-list) goal. For the basics (colour counts, caveats, and how HDR differs), start with [From one bit to HDR](colour-depth-explained.md).
+Deep colour is older than HDR by more than a decade.
+More than eight bits per component on an SDR signal removes banding from gradients and gives calibration and tone-mapping stages room to work; it changes neither the transfer function nor the gamut.
+This page follows it from its first products to the rules a Linux driver must obey to deliver it, and is the foundation of this list's [high-SDR](readme.md#how-to-read-this-list) goal.
+For the basics (colour counts, caveats, and how HDR differs), start with [From one bit to HDR](colour-depth-explained.md).
 
 ## History
 
@@ -21,7 +24,8 @@ Deep colour is older than HDR by more than a decade. More than eight bits per co
 - [DRM fourcc definitions](https://github.com/torvalds/linux/blob/master/include/uapi/drm/drm_fourcc.h) - `XRGB2101010` and relatives: the 10-bit scanout formats a compositor can hand to the kernel.
 - [DRM KMS properties](https://docs.kernel.org/gpu/drm-kms.html) - `max bpc` and `Broadcast RGB`, the connector controls for link depth and RGB quantization range.
 
-HDMI, CTA-861 and DisplayPort texts are licensed or member-only; see [standards.md](standards.md) for their public pages. The HDMI Deep Color capability bits (`DC_30`, `DC_36`, `DC_48`, `DC_Y444`) live in the HDMI vendor-specific data block of the sink's EDID.
+HDMI, CTA-861 and DisplayPort texts are licensed or member-only; see [standards.md](standards.md) for their public pages.
+The HDMI Deep Color capability bits (`DC_30`, `DC_36`, `DC_48`, `DC_Y444`) live in the HDMI vendor-specific data block of the sink's EDID.
 
 ## Rules a source must follow
 
