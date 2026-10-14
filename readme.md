@@ -117,6 +117,9 @@ Neither is reported as native HDR output.
 - [Kodi](https://github.com/xbmc/xbmc) - Media centre with platform-specific HDR passthrough and display-mode code worth comparing across operating systems.
 - [GStreamer](https://gitlab.freedesktop.org/gstreamer/gstreamer) - Media framework carrying colourimetry and HDR metadata through caps and elements.
 - [OpenColorIO](https://github.com/AcademySoftwareFoundation/OpenColorIO) - Production colour-management framework; adjacent to display HDR rather than a KMS implementation.
+- [OpenEXR](https://github.com/AcademySoftwareFoundation/openexr) - The film industry's scene-linear HDR image format and its reference library, kept by the Academy Software Foundation; its command-line tools are packaged in Debian as `openexr`.
+- [OpenImageIO](https://github.com/AcademySoftwareFoundation/OpenImageIO) - Reads and writes OpenEXR, Radiance HDR and dozens of other image formats, with colour transforms through OpenColorIO; its `oiiotool` converts and inspects HDR stills (Debian: `openimageio-tools`).
+- [JERI](https://github.com/DisneyResearch/jeri) - Disney Research's viewer for OpenEXR images inside a web page, with exposure and view-transform controls, built on OpenEXR compiled to run in the browser.
 - [Proton-CachyOS 11.0-20260601](https://github.com/CachyOS/proton-cachyos/releases/tag/cachyos-11.0-20260601-slr) - CachyOS's Proton build, released in June 2026, that detects and enables HDR in games automatically, with its Wine Wayland driver work, instead of per-game launch options; `DXVK_NO_HDR=1` turns it off. It works at the game layer only: it relies on the compositor's colour management (its release notes say GNOME does not yet expose enough) and on the kernel and GPU driver below to carry HDR, which the notes do not address. Reported (the release notes and [GamingOnLinux](https://www.gamingonlinux.com/2026/06/proton-cachyos-update-brings-automatic-hdr-wayland-improvements-and-more-bug-fixes/)), not measured here.
 
 ## Tools
@@ -126,6 +129,7 @@ Neither is reported as native HDR output.
 - [drm_info](https://gitlab.freedesktop.org/emersion/drm_info) - Dumps DRM devices, connector properties, formats, and capabilities as structured data.
 - [IGT GPU Tools](https://gitlab.freedesktop.org/drm/igt-gpu-tools) - Kernel graphics test suite, including KMS validation infrastructure.
 - [dovi_tool](https://github.com/quietvoid/dovi_tool) - Parses and manipulates Dolby Vision RPU metadata in owned media.
+- [Dolby Vision professional decoder plug-in examples](https://github.com/DolbyLaboratories/dolby_vision_professional_decoder_plugin) - Dolby's BSD-3-Clause examples for its Dolby Vision professional decoder SDK: an FFmpeg-based HEVC decoder plug-in and a GStreamer element. The SDK itself comes from Dolby.
 - [hdr10plus_tool](https://github.com/quietvoid/hdr10plus_tool) - Extracts, edits, and verifies HDR10+ dynamic metadata.
 - [MediaInfo](https://github.com/MediaArea/MediaInfo) - Reports container and elementary-stream colour/HDR metadata.
 
@@ -133,6 +137,7 @@ Neither is reported as native HDR output.
 
 - [EBU test sequences](https://tech.ebu.ch/testsequences) - Broadcaster test material, with licensing stated per sequence.
 - [AV1 test vectors](https://aomedia.googlesource.com/av1-test-vectors/) - Alliance for Open Media decoder conformance material.
+- [Fluster](https://github.com/fluendo/fluster) - Fluendo's decoder conformance framework (LGPL-3.0), with high-bit-depth sets among its suites (HEVC range extensions, VP9 high-bit-depth vectors, Chromium's 10-bit AV1 vectors), run through FFmpeg, GStreamer and hardware decoders.
 - [Testing guide](testing.md) - Separates source inspection, property checks, atomic acceptance, packet observation, sink indication, and photometric measurement.
 
 An HDMI protocol analyzer can prove InfoFrame bytes.
