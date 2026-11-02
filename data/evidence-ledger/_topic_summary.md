@@ -9,5 +9,7 @@ This consumer registry points to canonical hardware and standards claims in
 - `.github/workflows/evidence-ledger.yml` verifies current upstream hashes and
   correction/supersession state through the producer's pinned reusable action.
 
-The first federation is intentionally limited to the HDMI Deep Color,
+The first federation is intentionally limited to the [HDMI®](https://www.hdmi.org/resource/brand) Deep Color,
 deep-colour-plus-3D, and HDR scope claims that this list already consumes.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

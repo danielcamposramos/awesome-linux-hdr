@@ -21,7 +21,7 @@ It also usefully separates luminance mapping from precision preservation, but th
 | scanout | pixels stored in the DRM framebuffer/plane | 16-bit integer/float when supported; XR30 fallback |
 | link | code words physically transported to the sink | highest verified sink- and bandwidth-valid 10/12/16 bpc |
 
-A 16-bit processing or scanout surface can still be quantized onto a 10- or 12-bpc HDMI link.
+A 16-bit processing or scanout surface can still be quantized onto a 10- or 12-bpc [HDMI®](https://www.hdmi.org/resource/brand) link.
 Conversely, a 10-bit framebuffer can be transported in a 12-bpc link container without creating source precision.
 Every report must name the stage instead of collapsing all three into “16-bit output.”
 
@@ -53,3 +53,5 @@ The project target is an open, vendor-neutral path that:
 7. produces the same evidence table on amdgpu, i915, nouveau, and proprietary NVIDIA.
 
 That integration and observability layer, not the invention of tone mapping: is the cross-maker gap this project aims to close.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

@@ -9,7 +9,7 @@ Passing one rung does not imply the next.
 2. **Enumeration:** `drm_info` or `modetest -c` shows the expected connector properties and sink capabilities.
 3. **Atomic state:** valid property combinations are accepted; invalid blobs, depths, formats, and modes are rejected deliberately.
 4. **Driver delivery:** tracepoints or instrumented code show the complete, checksummed packet reaching the generation-specific output function.
-5. **Wire:** an HDMI/DP analyzer captures the metadata packet and link format.
+5. **Wire:** an [HDMI®](https://www.hdmi.org/resource/brand)/DP analyzer captures the metadata packet and link format.
 6. **Sink:** the display reports the received mode, bit depth, colour format, and HDR state.
 7. **Light:** a meter verifies luminance, EOTF tracking, black level, and chromaticity.
 
@@ -29,7 +29,7 @@ Record the kernel, driver version, GPU PCI ID, connector, cable path, display mo
 
 Deep colour is a useful prerequisite test when no HDR sink is available:
 
-1. confirm the EDID declares the target depth for the selected HDMI colour format;
+1. confirm the EDID declares the target depth for the selected HDMI® colour format;
 2. confirm the driver exposes a depth control such as `max bpc`, or document the internal selection policy if it does not;
 3. choose a mode whose pixel clock fits the link at that depth;
 4. perform a reversible atomic modeset with a deterministic test image;
@@ -40,7 +40,7 @@ Deep colour is a useful prerequisite test when no HDR sink is available:
 An OSD report of 12 bits is measured link evidence.
 It does not establish PQ, HLG, HDR metadata, or photometric correctness.
 
-The first owned-hardware experiment is fully specified in the Bravia research record: [nouveau HDMI deep-colour hardware plan](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdmi-deep-colour-plan-2026-09-22.md).
+The first owned-hardware experiment is fully specified in the Bravia research record: [nouveau HDMI® deep-colour hardware plan](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdmi-deep-colour-plan-2026-09-22.md).
 Its 1080p60/12-bpc RGB rate is 222.75 MHz against the sink EDID's 225 MHz ceiling.
 The 1% margin makes exact arithmetic, fixed cabling, and a sink OSD reading part of the acceptance criteria.
 
@@ -82,3 +82,5 @@ It does not present mpv, libplacebo, gamescope, madVR, or Lumagen's already exis
 
 Use “not measured” freely.
 It is more useful than collapsing the stack into a single “HDR works” checkbox.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

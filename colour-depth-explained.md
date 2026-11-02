@@ -38,7 +38,7 @@ In 5-6-5, green gets the extra bit because the eye is most sensitive to it.
 - **More colours than you can see is the point, not a boast.** The "billions" figure counts combinations; what matters is whether the step between two neighbouring levels is visible in a smooth gradient.
 - **The transfer function decides where codes go.** SDR gamma spends more codes on dark tones, where the eye notices steps, which is why 8 bits suffice at SDR brightness. HDR uses a curve designed for its range (see PQ below).
 - **Video usually uses less than the full range.** Limited-range video puts 8-bit luma at 16–235: 220 levels of 256 (10-bit: 64–940, 877 of 1,024; 12-bit: 256–3,760, 3,505 of 4,096). Chroma runs 16–240. Desktops send full range 0–255. If sender and display disagree about which is in use, blacks crush or wash out. `Broadcast RGB` and the CTA-861 QS rule exist for this ([rules](sdr-deep-colour.md#rules-a-source-must-follow)).
-- **Chroma subsampling is not depth.** YCbCr 4:2:2 and 4:2:0 halve colour resolution, not colour precision. HDMI carries 4:2:2 at up to 12 bits in the same space as 8-bit RGB.
+- **Chroma subsampling is not depth.** YCbCr 4:2:2 and 4:2:0 halve colour resolution, not colour precision. [HDMI®](https://www.hdmi.org/resource/brand) carries 4:2:2 at up to 12 bits in the same space as 8-bit RGB.
 - **Panel, link and framebuffer are three different depths.** Many "8-bit" panels are 6-bit with [frame rate control](https://en.wikipedia.org/wiki/Frame_rate_control), alternating neighbouring levels over time, and many "10-bit" panels are 8-bit with FRC. A 10-bit framebuffer can ride a 12-bit link; a 16-bit one can be cut to 10. A television's information screen reports the depth it received on the link, which says nothing about the panel.
 - **Dithering trades steps for grain.** When depth is reduced, adding fine noise hides banding. It is a deliberate choice and should be reported as one, not mistaken for true depth.
 
@@ -60,3 +60,5 @@ HDR content can still be tone-mapped to SDR and carried on that link, which is t
 Compositors and renderers increasingly work in 16-bit floating point, for example [scRGB](https://en.wikipedia.org/wiki/ScRGB): linear light, with values above 1.0 for HDR highlights and below 0 for colours outside the sRGB gamut.
 The colour count stops being a useful number; precision is relative to the value, like a camera's exposure.
 The final output is still quantized to the link's 8, 10, 12 or 16 bits, and that last step is where depth is won or lost.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

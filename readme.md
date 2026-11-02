@@ -61,7 +61,7 @@ It does not mean tagging an SDR display as HDR.
 - [ITU-R BT.2100](https://www.itu.int/rec/R-REC-BT.2100/en) - HDR television image parameters, including PQ and HLG systems.
 - [ITU-R BT.2020](https://www.itu.int/rec/R-REC-BT.2020/en) - UHD television primaries, signal formats, and bit-depth vocabulary used by HDR systems.
 - [CTA-861.3-A](https://shop.cta.tech/products/cta-861-3) - Static HDR capability metadata and the Dynamic Range and Mastering InfoFrame.
-- [HDMI 2.0a announcement](https://hdmiforum.org/hdmi-forum-inc-release-2-0a-specification/) - HDMI Forum's public record of HDR transport being added through CEA-861.3.
+- [HDMI® 2.0a announcement](https://hdmiforum.org/hdmi-forum-inc-release-2-0a-specification/) - HDMI Forum's public record of HDR transport being added through CEA-861.3.
 - [Vulkan `VK_EXT_hdr_metadata`](https://registry.khronos.org/vulkan/specs/latest/man/html/VK_EXT_hdr_metadata.html) - Application API for supplying static HDR metadata to a swapchain.
 - [Matroska colour elements](https://www.matroska.org/technical/elements.html) - Container fields for matrix coefficients, transfer characteristics, primaries, mastering metadata, and content light levels.
 
@@ -71,7 +71,7 @@ See [standards.md](standards.md) for the connected map and citation notes.
 
 - [Linux DRM](https://github.com/torvalds/linux/tree/master/drivers/gpu/drm) - Connector capabilities, atomic state, EDID parsing, colour management, and driver-specific output programming.
 - [DRM HDR metadata UAPI](https://github.com/torvalds/linux/blob/master/include/uapi/drm/drm_mode.h) - `struct hdr_output_metadata`, the cross-driver userspace contract.
-- [DRM HDMI helper](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/display/drm_hdmi_helper.c) - Builds the HDMI Dynamic Range and Mastering InfoFrame from connector state.
+- [DRM HDMI® helper](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/display/drm_hdmi_helper.c) - Builds the [HDMI®](https://www.hdmi.org/resource/brand) Dynamic Range and Mastering InfoFrame from connector state.
 - [Mesa](https://gitlab.freedesktop.org/mesa/mesa) - OpenGL/Vulkan drivers and WSI paths between applications, compositors, and KMS.
 - [Wayland protocols](https://gitlab.freedesktop.org/wayland/wayland-protocols) - Home of the standardized colour-management protocol.
 - [KWin](https://invent.kde.org/plasma/kwin) - KDE's Wayland compositor and one open implementation of HDR and colour-management policy.
@@ -98,7 +98,7 @@ GNOME (Mutter):
 
 ## Project roadmap
 
-The first owned-hardware programme deliberately does not require an HDR display: enable a standards-bounded 12-bpc nouveau HDMI link to an SDR Sony KDL-46HX855, then render HDR10/HLG sources through a high-precision real-time tone mapper into a 10-bit scanout buffer carried by that 12-bpc link. amdgpu is the open implementation reference; the proprietary NVIDIA stack is a measured behavioural control and an API reference where its glue is open.
+The first owned-hardware programme deliberately does not require an HDR display: enable a standards-bounded 12-bpc nouveau HDMI® link to an SDR Sony KDL-46HX855, then render HDR10/HLG sources through a high-precision real-time tone mapper into a 10-bit scanout buffer carried by that 12-bpc link. amdgpu is the open implementation reference; the proprietary NVIDIA stack is a measured behavioural control and an API reference where its glue is open.
 
 The wider target is cross-vendor **HDR-to-high-SDR on the fly**.
 Linux already has tone-mapping algorithms, 16-bit integer/float DRM formats, and individual high-bpc driver paths, but not one automatic, measured contract that preserves that precision from HDR metadata to an SDR sink across AMD, Intel, NVIDIA, and nouveau.
@@ -140,7 +140,7 @@ Neither is reported as native HDR output.
 - [Fluster](https://github.com/fluendo/fluster) - Fluendo's decoder conformance framework (LGPL-3.0), with high-bit-depth sets among its suites (HEVC range extensions, VP9 high-bit-depth vectors, Chromium's 10-bit AV1 vectors), run through FFmpeg, GStreamer and hardware decoders.
 - [Testing guide](testing.md) - Separates source inspection, property checks, atomic acceptance, packet observation, sink indication, and photometric measurement.
 
-An HDMI protocol analyzer can prove InfoFrame bytes.
+An HDMI® protocol analyzer can prove InfoFrame bytes.
 A display OSD can prove the mode the sink says it received.
 A colorimeter or spectroradiometer can measure luminance and chromaticity.
 None substitutes for all the others.
@@ -148,14 +148,14 @@ None substitutes for all the others.
 ## Repair maps and case studies
 
 - [nouveau HDR gap audit](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdr-gap-2026-09-22.md) - Source-confirmed missing KMS/InfoFrame path in Linux 7.3-rc4, including the 17-byte-versus-30-byte boundary and newer generic packet machinery.
-- [nouveau HDMI Deep Color v2](https://lore.kernel.org/dri-devel/20260922215317.611388-1-Capitain_Jack@yahoo.com/) - Link-depth selection and GCP programming for 30/36/48-bpp RGB; 12- and 10-bpc links measured on GA106 to a Sony KDL-46HX855, including 3D at 12 bpc. 48 bpp is implemented, not measured.
-- [nouveau HDMI colour format series](https://lore.kernel.org/dri-devel/20260922215336.612239-1-Capitain_Jack@yahoo.com/) - Broadcast RGB and YCbCr 4:4:4/4:2:2/4:2:0 through the head's output CSC, 25 configurations measured on the same bench. 4:2:0 and DVI are implemented, not measured.
+- [nouveau HDMI® Deep Color v2](https://lore.kernel.org/dri-devel/20260922215317.611388-1-Capitain_Jack@yahoo.com/) - Link-depth selection and GCP programming for 30/36/48-bpp RGB; 12- and 10-bpc links measured on GA106 to a Sony KDL-46HX855, including 3D at 12 bpc. 48 bpp is implemented, not measured.
+- [nouveau HDMI® colour format series](https://lore.kernel.org/dri-devel/20260922215336.612239-1-Capitain_Jack@yahoo.com/) - Broadcast RGB and YCbCr 4:4:4/4:2:2/4:2:0 through the head's output CSC, 25 configurations measured on the same bench. 4:2:0 and DVI are implemented, not measured.
 - [NVIDIA issue #1384](https://github.com/NVIDIA/open-gpu-kernel-modules/issues/1384) - Measured EDID-surface narrowing on GA106 plus the explicitly qualified HDR connection; the reporting bench has no HDR sink.
 - [DRM HDR metadata introduction](https://lists.freedesktop.org/archives/dri-devel/2019-March/211334.html) - Intel-originated kernel series showing how the common UAPI entered DRM.
 
 ## Related lists
 
-- [awesome-stereoscopy](https://github.com/danielcamposramos/awesome-stereoscopy) - Depth formats and HDMI 3D signalling; overlaps where EDID and InfoFrame machinery carries both depth and colour capabilities.
+- [awesome-stereoscopy](https://github.com/danielcamposramos/awesome-stereoscopy) - Depth formats and HDMI® 3D signalling; overlaps where EDID and InfoFrame machinery carries both depth and colour capabilities.
 - [awesome-colour](https://github.com/colour-science/awesome-colour) - Colour science, libraries, datasets, and production tools.
 - [awesome-browser-hdr](https://github.com/cmahnke/awesome-browser-hdr) - HDR behaviour and tooling in browsers.
 - [Awesome Gain Maps](https://github.com/NMoroney/Awesome-Gain-Maps) - HDR still images represented with gain maps.
@@ -177,3 +177,5 @@ None substitutes for all the others.
 - A public matrix separating “property exposed,” “packet emitted,” “sink reports HDR,” and “photometrically correct.”
 
 Contributions that close these gaps are welcome; see [contributing.md](contributing.md).
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

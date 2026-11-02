@@ -7,15 +7,15 @@ A link in source proves implementation, not successful hardware output.
 
 - [`HDR_OUTPUT_METADATA` UAPI](https://github.com/torvalds/linux/blob/master/include/uapi/drm/drm_mode.h) - Userspace supplies static metadata as a connector blob.
 - [Connector HDR property helpers](https://github.com/torvalds/linux/tree/master/drivers/gpu/drm) - Create, attach, duplicate, validate, and destroy connector state.
-- [`drm_hdmi_infoframe_set_hdr_metadata()`](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/display/drm_hdmi_helper.c) - Converts connector metadata into the HDMI DRM InfoFrame structure.
+- [`drm_hdmi_infoframe_set_hdr_metadata()`](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/display/drm_hdmi_helper.c) - Converts connector metadata into the [HDMI®](https://www.hdmi.org/resource/brand) DRM InfoFrame structure.
 - [EDID display information](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/drm_edid.c) - Parses CTA blocks and display colour/HDR declarations.
 
 ## Driver map
 
 | driver | readable HDR surface | current evidence boundary |
 |---|---|---|
-| i915/xe display | Connector properties and HDMI/DP metadata paths exist in-tree | Reference implementation; hardware coverage varies by generation. |
-| amdgpu DC | Exposes `HDR_OUTPUT_METADATA`, `Colorspace`, and `max bpc` connector properties; prepares HDR metadata as an HDMI/DisplayPort InfoFrame | [Connector properties](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L3269-L3294); [HDR metadata handling](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L2518) |
+| i915/xe display | Connector properties and HDMI®/DP metadata paths exist in-tree | Reference implementation; hardware coverage varies by generation. |
+| amdgpu DC | Exposes `HDR_OUTPUT_METADATA`, `Colorspace`, and `max bpc` connector properties; prepares HDR metadata as an HDMI®/DisplayPort InfoFrame | [Connector properties](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L3269-L3294); [HDR metadata handling](https://github.com/torvalds/linux/blob/fe2ec83746e501645709761605c2464a44fd2929/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c#L2518) |
 | nouveau | No HDR metadata property or DRM InfoFrame path in Linux 7.3-rc4 | [Source audit](https://github.com/danielcamposramos/sony-bravia-linux/blob/main/docs/research/nouveau-hdr-gap-2026-09-22.md); implementation project, not output-tested HDR. |
 | proprietary NVIDIA | Open `nvidia-drm` glue exposes metadata and hands it to NVKMS | Output policy is closed; [#1384](https://github.com/NVIDIA/open-gpu-kernel-modules/issues/1384) asks NVIDIA to identify the ownership boundary. |
 
@@ -42,3 +42,5 @@ The proprietary and nouveau findings share a standards contract but not a code p
 2. nouveau lacks the KMS surface and 30-byte packet route in readable code. Its upper plumbing is straightforward; generation-specific packet emission remains the hardware-facing research boundary.
 
 Calling the second a “port” is architectural shorthand, not literal code reuse from NVKMS.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

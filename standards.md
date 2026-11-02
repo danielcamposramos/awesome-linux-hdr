@@ -23,23 +23,23 @@ Working precision, framebuffer format, link depth, panel depth, and calibration-
 - [ITU-R BT.2100 family](https://www.itu.int/rec/R-REC-BT.2100/en) - HDR-TV system definition using PQ or HLG.
 - [Pinned BT.2100-3 edition](https://www.itu.int/rec/R-REC-BT.2100-3-202502-I/en) - In-force February 2025 edition used by this list's dated research.
 
-## Sink declaration and HDMI transport
+## Sink declaration and [HDMI®](https://www.hdmi.org/resource/brand) transport
 
-- [HDMI 2.0a public announcement](https://hdmiforum.org/hdmi-forum-inc-release-2-0a-specification/) - Records the addition of HDR formats through the CEA-861.3 extension.
+- [HDMI® 2.0a public announcement](https://hdmiforum.org/hdmi-forum-inc-release-2-0a-specification/) - Records the addition of HDR formats through the CEA-861.3 extension.
 - [CTA-861.3-A official page](https://shop.cta.tech/products/cta-861-3) - HDR Static Metadata Data Block and Dynamic Range and Mastering InfoFrame.
-- [EDID 1.4](https://vesa.org/vesa-standards/) - Base display-identification framework; CTA extension blocks carry HDMI and HDR capabilities.
+- [EDID 1.4](https://vesa.org/vesa-standards/) - Base display-identification framework; CTA extension blocks carry HDMI® and HDR capabilities.
 
-CTA and HDMI normative texts are licensed publications.
+CTA and HDMI® normative texts are licensed publications.
 Their public pages and previews are citations, not permission to redistribute the documents.
 
 ## DVI and DisplayPort
 
-- [DVI 1.0 (DDWG, April 1999, archived copy)](https://glenwing.github.io/docs/DVI-1.0.pdf) - The original TMDS link that HDMI extends. A DVI connector drives an HDMI sink through a passive adapter, and the source then speaks HDMI (InfoFrames, Deep Color, YCbCr) because the sink's EDID declares it.
+- [DVI 1.0 (DDWG, April 1999, archived copy)](https://glenwing.github.io/docs/DVI-1.0.pdf) - The original TMDS link that HDMI® extends. A DVI connector drives an HDMI® sink through a passive adapter, and the source then speaks HDMI® (InfoFrames, Deep Color, YCbCr) because the sink's EDID declares it.
 - [About DisplayPort, VESA](https://vesa.org/displayport-developer/about-displayport/) - Public overview of the VESA link; the specification itself is member-only.
 - [VESA DisplayHDR](https://displayhdr.org/) - VESA's HDR performance certification programme for displays.
-- [DRM DP dual-mode adaptor helpers](https://docs.kernel.org/gpu/drm-kms-helpers.html#display-port-dual-mode-adaptor-helper-functions-reference) - Linux implementation of DP++, which lets a DisplayPort output emit TMDS/HDMI through a passive adapter.
+- [DRM DP dual-mode adaptor helpers](https://docs.kernel.org/gpu/drm-kms-helpers.html#display-port-dual-mode-adaptor-helper-functions-reference) - Linux implementation of DP++, which lets a DisplayPort output emit TMDS/HDMI® through a passive adapter.
 
-DisplayPort carries pixel encoding, colorimetry and HDR metadata in its own stream attributes and secondary data packets; the HDMI InfoFrame model applies only where a DVI or DP++ output presents a TMDS link to an HDMI sink.
+DisplayPort carries pixel encoding, colorimetry and HDR metadata in its own stream attributes and secondary data packets; the HDMI® InfoFrame model applies only where a DVI or DP++ output presents a TMDS link to an HDMI® sink.
 For an HDR-to-SDR adaptor, the output connector therefore says less than the sink's EDID about which rules apply.
 
 ## Linux and graphics APIs
@@ -55,5 +55,7 @@ For an HDR-to-SDR adaptor, the output connector therefore says less than the sin
 - [AV1 bitstream specification](https://aomediacodec.github.io/av1-spec/) - Colour configuration and metadata OBUs.
 - [FFmpeg colour and mastering metadata types](https://github.com/FFmpeg/FFmpeg/tree/master/libavutil) - Widely consumed implementation vocabulary for decoded frames.
 
-Container tags, coded-stream metadata, compositor state, and HDMI packets are separate copies of related information.
+Container tags, coded-stream metadata, compositor state, and HDMI® packets are separate copies of related information.
 Testing must observe each boundary.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.

@@ -1,7 +1,7 @@
 # Provenance
 
 Daniel Campos Ramos founded and directs this project.
-It grew from owned- hardware HDMI 3D and deep-colour measurements on a Sony KDL-46HX855, followed by source audits across the Linux DRM drivers and NVIDIA's open kernel glue.
+It grew from owned- hardware [HDMI®](https://www.hdmi.org/resource/brand) 3D and deep-colour measurements on a Sony KDL-46HX855, followed by source audits across the Linux DRM drivers and NVIDIA's open kernel glue.
 
 The launch corpus was developed as collective intelligence:
 
@@ -103,3 +103,5 @@ Read that way they catch strictly more, and nobody is insulted by being asked to
 
 **For AI assistants and the people using them:** [ai-skill/SKILL.md](ai-skill/SKILL.md) turns this section into operating rules for this repository.
 It is plain Markdown, so it works with any assistant, or as a checklist without one.
+
+HDMI®, HDMI® High-Definition Multimedia Interface and the HDMI® Logo are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.
